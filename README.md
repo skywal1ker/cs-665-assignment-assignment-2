@@ -1,10 +1,10 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Iztore Kargabayev          |
+| Date         | 02/23/2023                 |
+| Course       | Spring                     |
+| Assignment # | 2                          |
 
 # Assignment Overview
 Please add a paragraph or two overviewing the objectives of the assignment.
@@ -13,17 +13,34 @@ Please add a paragraph or two overviewing the objectives of the assignment.
 https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
 
 # Implementation Description 
-
+This code represents a simple implementation of the Observer design pattern. 
+It includes a Shop class that observes DeliveryRequests and notifies its list of Driver observers when 
+a new DeliveryRequest is added. The Driver class and its subclasses represent the different types of drivers who receive 
+notifications of new DeliveryRequests from the Shop. The Main class creates a Shop, some drivers, and a DeliveryRequest, 
+and adds the DeliveryRequest to the Shop, triggering notifications to the drivers.
 
 For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
+Here I have used separate classes and made easily maintain.
+For example, if a new type of driver is needed, a new class can be created that extends the 
+Driver class and implements the update method, and then that driver can be added to the Shop's list of observers.
+
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
+Here I have used separate classes and files to make it more independent from each other.
+
+
 - Describe how you have avoided duplicated code and why it is important.
+I have used interfaces and inheritance for this purpose. 
+
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
+Observer design pattern to allow the Shop to notify its observers(the drivers) when a new delivery request is added.
+Observer pattern was chosen because it allows for loose coupling between the Shop and the drivers, 
+and allows new drivers to be easily added or removed without affecting the Shop's functionality. 
+
 
 
 # Maven Commands
